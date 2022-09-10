@@ -11,9 +11,9 @@ public class Main {
 
         CPU cpu = new CPU();
 
-        cpu.loadInstructionsIntoMemory(instructions);
+        cpu.loadInstructionsIntoMemory(instructions, (short) 0);
 
-        //cpu.beginExecution();
+        cpu.run();
     }
     public static int[] loadInstructionsFromFile(String file) {
         try {
