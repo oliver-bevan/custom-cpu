@@ -17,13 +17,9 @@ public class Memory {
         System.out.println("--BEGIN MEMORY DUMP--");
 
         for(int i = 0; i < mainmem.length; i++) {
-            String output = String.format("%02X", mainmem[i]);
-
-            System.out.print(output);
-
-            if (i % 4 == 0) {
-                System.out.println();
-            }
+            String output = String.format("%8s", Integer.toBinaryString(mainmem[i] & 0xFF)).replace(' ', '0');
+            System.out.println(output);
         }
+        System.out.println("--END MEMORY DUMP--");
     }
 }
