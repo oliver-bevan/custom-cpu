@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Instantiating CPU");
         //cpu = new CPU();
-        int[] instructions = loadInstructionsFromFile("testbin.bin");
+        int[] instructions = loadInstructionsFromFile(args[0]);
 
         CPU cpu = new CPU();
 
