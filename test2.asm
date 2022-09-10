@@ -1,5 +1,7 @@
 .start
-LD R1, 0
+LD R1, 60
 ADD R1, 1
-BRA start
+CMP R1, 120
+ST R1, $32256
+BLT start
 HALT
